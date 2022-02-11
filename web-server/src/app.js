@@ -17,19 +17,19 @@ hbs.registerPartials(partialPath);
 
 
 app.get('', function (req, res) {
-    res.render('index', { title: 'Home' })
+    res.render('index', { title: 'Home',author:'sarfaraz' })
 })
 app.get('/about', function (req, res) {
-    res.render('about', { title: 'about' })
+    res.render('about', { title: 'about',author:'sarfaraz' })
 })
 
 app.get('/help', function (req, res) {
-    res.render('help', { title: 'help' })
+    res.render('help', { title: 'help',author:'sarfaraz' })
 })
 
 app.get('*',(request,response)=>{
     response.render('404',{title:'404',
-    errorMessage:'Page not found'})
+    errorMessage:'Page not found',author:'sarfaraz'})
 })
 
 app.listen(3000)
